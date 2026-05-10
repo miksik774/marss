@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Mars Colony Ares Prime</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <h2>mars travel</h2>
+    <ul>
+        <li><a href="#hero">Головна</a></li>
+        <li><a href="#mission">Місія</a></li>
+        <li><a href="#technology">Технології</a></li>
+        <li><a href="#base">База</a></li>
+        <li><a href="#team">Команда</a></li>
+        <li><a href="#timeline">Місія</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#facts">Факти</a></li>
+        <li><a href="#contact">Контакти</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<header id="hero">
+    <h1>🚀travel</h1>
+    <p>Перша колонія людства на Марсі</p>
+    <button onclick="scrollToSection('mission')">Дослідити</button>
+</header>
+
+<!-- МІСІЯ -->
+<section id="mission" class="fade">
+    <h2>Місія</h2>
+    <p>Створити самодостатню цивілізацію на Марсі до 2050 року.</p>
+</section>
+
+<!-- ТЕХНОЛОГІЇ -->
+<section id="technology" class="fade">
+    <h2>Технології</h2>
+    <div class="grid">
+        <div class="card" onclick="openModal('AI керує базою')">🤖 AI</div>
+        <div class="card" onclick="openModal('Вирощування їжі')">🌱 Ферми</div>
+        <div class="card" onclick="openModal('Переробка води')">💧 Вода</div>
+        <div class="card" onclick="openModal('Сонячна енергія')">☀️ Енергія</div>
+    </div>
+</section>
+
+<!-- БАЗА -->
+<section id="base" class="parallax">
+    <h2>База</h2>
+    <p>Куполи, підземні міста та лабораторії</p>
+</section>
+
+<!-- КОМАНДА -->
+<section id="team" class="fade">
+    <h2>Команда</h2>
+    <div class="grid">
+        <div class="card">Інженери</div>
+        <div class="card">Науковці</div>
+        <div class="card">Пілоти</div>
+        <div class="card">AI-оператори</div>
+    </div>
+</section>
+
+<!-- ТАЙМЛАЙН -->
+<section id="timeline" class="fade">
+    <h2>Хронологія</h2>
+    <ul>
+        <li>2030 — перша місія</li>
+        <li>2040 — база</li>
+        <li>2050 — колонія</li>
+    </ul>
+</section>
+
+<!-- ТАЙМЕР -->
+<section class="fade">
+    <h2>До запуску місії</h2>
+    <h3 id="timer"></h3>
+</section>
+
+<!-- ГАЛЕРЕЯ -->
+<section id="gallery" class="fade">
+    <h2>Галерея</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa">
+        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564">
+    </div>
+</section>
+
+<!-- ФАКТИ -->
+<section id="facts" class="fade">
+    <h2>Факти</h2>
+    <div class="grid">
+        <div class="card">Гравітація 38%</div>
+        <div class="card">-140°C</div>
+        <div class="card">687 днів рік</div>
+    </div>
+</section>
+
+<!-- КОНТАКТИ -->
+<section id="contact" class="fade">
+    <h2>Контакти</h2>
+    <form onsubmit="sendForm(event)">
+        <input type="text" placeholder="Ім'я" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Повідомлення"></textarea>
+        <button type="submit">Відправити</button>
+    </form>
+</section>
+
+<!-- МОДАЛКА -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeModal()">×</span>
+        <p id="modalText"></p>
+    </div>
+</div>
+
+<button id="topBtn" onclick="scrollToTop()">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
